@@ -1,0 +1,19 @@
+{
+    "manifest_version": 3,
+    "name": "XL8 Drag Translator",
+    "description": "",
+    "version": "1.0",
+    "action": {
+        "default_popup": "popup/popup.html"
+    },
+    "background": {
+        "service_worker": "background.js"
+    },
+    "permissions": ["activeTab", "scripting", "contextMenus", "storage"],
+    "content_scripts": [
+        {
+            "js": ["script.js"],
+            "matches": ["<all_urls>"]
+        }
+    ]
+}
